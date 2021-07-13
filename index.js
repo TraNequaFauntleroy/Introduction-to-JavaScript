@@ -125,9 +125,23 @@ Puppies less than 1 year
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(weight, age){
+  if(age >= 1 && weight <= 5) {
+    return weight * .05;
+  } else if (age >=1 && weight <= 10) {
+    return weight * .04;
+  } else if (age >= 1 && weight <=15) {
+    return weight * .03;
+  } else if (age >=1 && weight > 15) {
+    return weight * .02;
+  } else if (age < 1) {
+    return weight * .1;
+  }
+
 }
+
+console.log('task 3', hungryDog(17, 1));
+  
 
 
 
@@ -152,6 +166,7 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 let computer = Math.random();
+
 if(computer <= 0.34) {
   computer = 'rock';
 } else if (computer <= 0.67) {
@@ -174,7 +189,7 @@ function game(user, computer){
   }
 }
 
-console.log('task4', game('rock', computer))
+console.log('task 4', game('rock', computer))
 
 
 
@@ -245,27 +260,22 @@ Using the grade function below do the following:
  60-69 should return 'you got a D'
  below should return 'you got an F'
 */
-let gradeA = 90-100;
-let gradeB = 80-89;
-let gradeC = 70-79;
-let gradeD = 60-69;
 
 function grade(score){
-  if (score === gradeA) {
+  if (score >= 90) {
     return 'you got an A';
-  } else if (score === gradeB) {
+  } else if (score >= 80) {
     return 'you got a B';
-  } else if (score === gradeC) {
+  } else if (score >= 70) {
     return 'you got a C';
-  } else if (score === gradeD) {
+  } else if (score >= 60) {
     return 'you got a D';
   } else {
     return 'you got an F';
   }
 }
-console.log('task 7', grade(98));
+console.log('task 7', grade(61));
 
-grade('task 7', 78);
 
 
 
