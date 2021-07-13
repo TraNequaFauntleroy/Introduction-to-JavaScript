@@ -20,6 +20,11 @@ Do the following:
    HINT: no function required
 */
 
+let VotingAge = 16;
+
+if (VotingAge < 18) {
+  console.log('true');
+}
 
 
 /*
@@ -33,8 +38,13 @@ Do the following:
    HINT: no function required
 */
 
+let apple = "red";
+let lime = "green";
 
-
+if (lime === "green") {
+  apple = "blue";
+  console.log(apple);
+}
 
 
 /*
@@ -48,7 +58,9 @@ Do the following:
    HINT: look up the Number method
 */
 
-
+let num = '1999'
+num.toString('1999')
+console.log('task 1c', num)
 
 
 /*
@@ -60,9 +72,11 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
+function multiply(a, b){
+  return a * b;
 }
+
+console.log('task 1d' ,multiply(3, 5));
 
 
 
@@ -76,9 +90,11 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(age){
+  return age * 7;
 }
+
+dogYears(16);
 
 
 
@@ -146,15 +162,15 @@ if(computer <= 0.34) {
 
 function game(user, computer){
   if(user === computer) {
-    return `it's a tie`
+    return "it's a tie"
   } else if (user === 'rock' && computer === 'scissors') {
-    return `you win!`
+    return "you win!"
   } else if (user === 'paper' && computer === 'rock') {
-    return `you win!`
+    return "you win!"
   } else if (user === 'scissors' && computer === 'paper') {
-    return `you win!`
+    return "you win!"
   } else {
-    `you lose!`
+    "you lose!"
   }
 }
 
@@ -169,13 +185,15 @@ console.log('task4', game('rock', computer))
 /*
 Using the miles function below do the following:
 1. Receive a number of kilometers
-2. Convert the number of kiolmeters received to miles
+2. Convert the number of kilometers received to miles
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(km){
+  return km * 0.621371;
 }
+
+console.log('task 5a', miles(9));
 
 
 
@@ -187,9 +205,11 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(cm){
+  return cm/ 30.48;
 }
+
+console.log('task 5b', feet(5));
 
 
 
@@ -205,11 +225,10 @@ Using the annoyingSong function below do the following:
 
 function annoyingSong(number){
       for(let i = number; i > 0; i--) {
-        return `${i} bottles of soda on the wall, ${i} bottles of soda,take one down, pass it around ${i -1} of soda on the wall` 
+        return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i - 1} bottles of soda on the wall` 
       }
 }
-
-console.log('task 6', annoyingSong(99))
+console.log('task 6', annoyingSong(77))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -226,10 +245,27 @@ Using the grade function below do the following:
  60-69 should return 'you got a D'
  below should return 'you got an F'
 */
+let gradeA = 90-100;
+let gradeB = 80-89;
+let gradeC = 70-79;
+let gradeD = 60-69;
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(score){
+  if (score === gradeA) {
+    return 'you got an A';
+  } else if (score === gradeB) {
+    return 'you got a B';
+  } else if (score === gradeC) {
+    return 'you got a C';
+  } else if (score === gradeD) {
+    return 'you got a D';
+  } else {
+    return 'you got an F';
+  }
 }
+console.log('task 7', grade(98));
+
+grade('task 7', 78);
 
 
 
